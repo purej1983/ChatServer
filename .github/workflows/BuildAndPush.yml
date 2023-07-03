@@ -41,7 +41,7 @@ jobs:
         uses: docker/metadata-action@v4.4.0
         with:
           images: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/spring-application
+            ${{ secrets.DOCKERHUB_USERNAME }}/chat_server
           tags: |
             type=semver,pattern={{version}}
 
