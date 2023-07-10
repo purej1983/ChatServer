@@ -22,6 +22,8 @@ services:
       - POSTGRES_DB=${POSTGRES_DB} #optional (specify default database instead of $POSTGRES_DB)
     ports:
       - "5432:5432"
+    volumes:
+      - mongo-data:/data/db
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -d chat_db -U chat_admin" ]
       interval: 1s
@@ -36,4 +38,8 @@ services:
     ports:
       - "5050:80"
     restart: always
+
+volumes:
+  mongo-data:
+    driver: local
 
