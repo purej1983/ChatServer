@@ -36,3 +36,5 @@ out/
 .vscode/
 /pgadmin-data/**
 /tmp/db/**
+
+.env
